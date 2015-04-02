@@ -6,25 +6,52 @@
 
 	</head>
 	<body>
-		<h2>
-		Why students are paying more for higher education?
-		</h2>
+		<h2>Why students are paying more for higher education?</h2>
+		<h2>How one univeristy spends money?</h2>
+		<div class="fulli_container interactive">
+			<h4>Budget of Colorado State University, 2011-2012</h4>
+			<p><b><i>Example: how to read the money flow</i></b></br><span id="legend-rect">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Revenue <span id="legend-ncaa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Colorado State University:$358825960 <span id="legend-cash">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Expenditures</p>
 
+	  		<p id="chart1">
+		
+			<div id="Star_Footer">
+				<div id="Star_Info">
+					<p class="Star_Source">
+					<strong>Source: </strong> Colorado State University
+					</p>
+					<p class="Star_Credit">
+						<strong>Produced by: </strong> Yelin Hong
+					</p>
+				</div>
+			</div>
+		</div>
 
-		<h2>
-		How one univeristy spends money?
-		</h2>
+		<div id = "container">
 
-
-		<h2>
-		How states change on state funding for higher education?
-		</h2>
-		(Here comes the map, dadadada)
-		<div id="map-container"></div>
+			<h2>
+			How states change on state funding for higher education?
+			</h2>
+			<p>(Here comes the map, dadadada)</p>
+			<div id = "date">
+				<p>12 Months Ending on:</p>
+				<p id = "month"></p>
+			</div>
+			<div id = "play"></div>
+			<div id = "slider-container">
+				<div id = "slider-div"></div>
+				<div id = "slider-probe">
+					<p></p>
+					<div></div>
+				</div>
+			</div> 
+			<div id="map-container"></div>
+		</div>
 		<script src = "lib/d3.v3.min.js"></script>
 		<script src = "lib/topojson.v1.min.js"></script>
 		<script src = "lib/d3.slider.js"></script>
+		<script src = "lib/sankey.js"></script>
 		<script src = "js/map_change_time.js"></script>
+		<script src = "js/csu_budget.js"></script>
 	</body>
 </html>
 
