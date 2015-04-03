@@ -22,13 +22,13 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-d3.json("json/budget.json", function(money) {
+d3.json("json/old_budget.json", function(money) {
 
   sankey
       .nodes(money.nodes)
       .links(money.links)
       .layout(32);
-
+  console.log(money.nodes)
   var link = svg.append("g").selectAll(".link")
       .data(money.links)
     .enter().append("path")
