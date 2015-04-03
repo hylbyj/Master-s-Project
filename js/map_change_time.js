@@ -47,20 +47,20 @@ var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov",
 var sliderMargin = 65;
 
 function circleSize(d){
-  return Math.sqrt( .02 * Math.abs(d) );
+  return Math.sqrt(d*1000);
 };
 
 
 d3.json("json/states.json", function(error, us) {
   map.selectAll("path")
-      .data(topojson.feature(us, us.objects.states).features)
+      .data(topojson.feature(us,us.objects.states).features)
       .enter()
       .append("path")
       .attr("vector-effect","non-scaling-stroke")
       .attr("class","land")
       .attr("d", path);
 
-   map.append("path")
+  map.append("path")
        .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
        .attr("class", "state-boundary")
        .attr("vector-effect","non-scaling-stroke")
@@ -75,20 +75,22 @@ d3.json("json/states.json", function(error, us) {
     .style("top",d3.select("#play").node().offsetTop + "px")
     .style("height",d3.select("#date").node().offsetHeight + d3.select("#map-container").node().offsetHeight + "px")
 
-  d3.csv("csv/jobs.csv",function(data){
+  d3.csv("csv/state_fund.csv",function(data){
     var first = data[0];
-    // get columns
+    console.log(data[0]);
     for ( var mug in first ){
-      if ( mug != "CITY" && mug != "LAT" && mug != "LON" ){
+      if ( mug != "STATE" && mug != "LAT" && mug != "LON" ){
         orderedColumns.push(mug);
       }
     }
 
     orderedColumns.sort( sortColumns );
-
+    console.log(orderedColumns);
+    console.log(data);
     // draw city points 
     for ( var i in data ){
       var projected = projection([ parseFloat(data[i].LON), parseFloat(data[i].LAT) ])
+      console.log(projected + i);
       map.append("circle")
         .datum( data[i] )
         .attr("cx",projected[0])
@@ -151,7 +153,7 @@ function drawMonth(m,tween){
       return Math.abs(b[m]) - Math.abs(a[m]);
     })
     .attr("class",function(d){
-      return d[m] > 0 ? "gain" : "loss";
+      return d[m] > 0.5 ? "gain" : "loss";
     })
   if ( tween ){
     circle
@@ -270,8 +272,8 @@ function createLegend(){
   legend.append("circle").attr("class","gain").attr("r",5).attr("cx",5).attr("cy",10)
   legend.append("circle").attr("class","loss").attr("r",5).attr("cx",5).attr("cy",30)
 
-  legend.append("text").text("jobs gained").attr("x",15).attr("y",13);
-  legend.append("text").text("jobs lost").attr("x",15).attr("y",33);
+  legend.append("text").text("student pay more").attr("x",15).attr("y",13);
+  legend.append("text").text("state pay more").attr("x",15).attr("y",33);
 
   var sizes = [ 10000, 100000, 250000 ];
   for ( var i in sizes ){
@@ -293,8 +295,8 @@ function setProbeContent(d){
   var val = d[ orderedColumns[ currentFrame ] ],
       m_y = getMonthYear( orderedColumns[ currentFrame ] ),
       month = months_full[ months.indexOf(m_y[0]) ];
-  var html = "<strong>" + d.CITY + "</strong><br/>" +
-            format( Math.abs( val ) ) + " jobs " + ( val < 0 ? "lost" : "gained" ) + "<br/>" +
+  var html = "<strong>" + d.STATE + "</strong><br/>" + "Net tuition is"
+            format( Math.abs( val ) ) + " of Total Education Revenues " + ( val < 0.5 ? "State pay more" : "Student pay more" ) + "<br/>" +
             "<span>" + month + " " + m_y[1] + "</span>";
   probe
     .html( html );

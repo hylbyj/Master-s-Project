@@ -1,46 +1,46 @@
 {
 	"nodes": [
-	{"color":"#1C5A74", "name": "Colorado State University",	"des": ""},
-
-	{"color":"#aacccc", "name": "FFS ContractS",	"des": ""},
-	{"color":"#aacccc", "name": "Subtotal Undergraduate Resident Tuition",				"des": ""},
-	{"color":"#aacccc", "name": "Graduate Resident Tuition",						"des": ""},
-	{"color":"#88aaaa", "name": "Non-Resident Tuition",									"des": ""},
-	{"color":"#6699aa", "name": "Non Appropriated E & G (Other than Tuition) Program Code 11XX",										"des": ""},
-
-
-	{"color":"#83AA76", "name": "Instruction", 				"des": "Based on conferences' performance in NCAA Tournament over rolling six-year period."},
-	{"color":"#83AA76", "name": "Research(State Supported)",			"des": "Made to all Division I schools based on number of athletic scholoarships."},
-	{"color":"#83AA76", "name": "Public Service",		"des": "Pays for items not covered by scholarships such as emergency trips home, clothes and graduate test fees."},
-	{"color":"#83AA76", "name": "Academic Support",		"des": "Based on number of sports sponsored by schools."},
-	{"color":"#83AA76", "name": "Student Service",			"des": "For schools' academic support services for athletes."},
-	{"color":"#83AA76", "name": "Insitutional Support",			"des": "For improving game officiating, drug education, opportunities for minorities."},
+	{"color":"#1C5A74", "name": "Colorado State University","des": ""},
+	{"color":"#aacccc", "name": "FFS ContractS","des": ""},
+	{"color":"#aacccc", "name": "Undergraduate Resident Tuition 'Stipend'","des": ""},
+	{"color":"#aacccc", "name": "Undergraduate Resident Tuition 'Student Share'","des": ""},
+	{"color":"#aacccc", "name": "Subtotal Undergraduate Resident Tuition","des": ""},
+	{"color":"#aacccc", "name": "Graduate Resident Tuition","des": ""},
+	{"color":"#88aaaa", "name": "Non-Resident Tuition",	"des": ""},
+	{"color":"#6699aa", "name": "Non Appropriated E & G (Other than Tuition) Program Code 11XX","des": ""},
+	{"color":"#83AA76", "name": "Instruction","des": ""},
+	{"color":"#83AA76", "name": "Research(State Supported)","des": ""},
+	{"color":"#83AA76", "name": "Public Service","des": ""},
+	{"color":"#83AA76", "name": "Academic Support",	"des": ""},
+	{"color":"#83AA76", "name": "Student Service","des": ""},
+	{"color":"#83AA76", "name": "Insitutional Support","des": ""},
 	{"color":"#83AA76", "name": "Operation & Maintenance of Plant",	"des": ""},
-
-	{"color":"#cc9944", "name": "Scholarships & Fellowships",	"des": ""},
-	{"color":"#eedd66", "name": "Hospitals",		"des": ""},
-	{"color":"#bb6611", "name": "Transfers",	"des": ""}
-
+	{"color":"#cc9944", "name": "State Fund","des": ""},
+	{"color":"#cc9944", "name": "Net Tuition","des": ""},
+	{"color":"#cc9944", "name": "Scholarships & Fellowships","des": ""},
+	{"color":"#eedd66", "name": "Hospitals","des": ""},
+	{"color":"#bb6611", "name": "Transfers","des": ""}
 	],
 
 	"links": [
-	{"source": 1, "target": 0, "value": 21205546},
-	{"source": 2, "target": 0, "value": 155498408},
-	{"source": 3, "target": 0, "value": 14984631},
-	{"source": 4, "target": 0, "value": 102943456},
-	{"source": 5, "target": 0, "value": 64193917},
-
-	
-
-	{"source": 0, "target": 6, "value": 169540351},
-	{"source": 0, "target": 7, "value": 18247346},
-	{"source": 0, "target": 8, "value": 818857},
-	{"source": 0, "target": 9, "value": 41242387},
-	{"source": 0, "target": 10, "value": 22317485},
-	{"source": 0, "target": 11, "value": 26409013},
-	{"source": 0, "target": 12, "value": 36037559},
-	{"source": 0, "target": 13, "value": 40503187},
-	{"source": 0, "target": 14, "value": 0},
-	{"source": 0, "target": 15, "value": 3709774}
+	{"source": 1, "target": 16, "value": 21205546},
+	{"source": 2, "target": 4, "value": 31593515},
+	{"source": 3, "target": 4, "value": 123904893}
+	{"source": 4, "target": 15, "value": 155498408},
+	{"source": 5, "target": 15, "value": 14984631},
+	{"source": 6, "target": 15, "value": 102943456},
+	{"source": 7, "target": 16, "value": 64193917},
+	{"source": 15, "target":0, "value": 273426495},
+	{"source": 16, "target":0, "value": 85399463},
+	{"source": 0, "target": 8, "value": 169540351},
+	{"source": 0, "target": 9, "value": 18247346},
+	{"source": 0, "target": 10, "value": 818857},
+	{"source": 0, "target": 11, "value": 41242387},
+	{"source": 0, "target": 12, "value": 22317485},
+	{"source": 0, "target": 13, "value": 26409013},
+	{"source": 0, "target": 14, "value": 36037559},
+	{"source": 0, "target": 17, "value": 40503186},
+	{"source": 0, "target": 18, "value": 0},
+	{"source": 0, "target": 19, "value": 3709774}
 	]
 }
