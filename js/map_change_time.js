@@ -1,5 +1,5 @@
 var width = 960,
-    height = 600;
+    height = 475;
 
 //d3.select("").style("height", height + "px");
 

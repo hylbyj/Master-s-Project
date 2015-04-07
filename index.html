@@ -3,7 +3,7 @@
 		<link rel="stylesheet" href="css/main.css" />
   		<link rel="stylesheet" href="lib/d3.slider.css" />
 		<title>Why students are paying more for higher education?</title>
-
+		<script src="lib/modernizr-2.0.6.min.js"></script>
 	</head>
 	<body>
 		<h2>Why students are paying more for higher education?</h2>
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<div id = "container">
+		<div id = "container-map">
 
 			<h2>
 			How states change on state funding for higher education?
@@ -47,12 +47,29 @@
 			</div> 
 			<div id="map-container"></div>
 		</div>
+		<div id = "container">
+			<h2>
+			Net Tuition and Fees per Full-Time Student 
+			</h2>
+			<div id="button-wrap">
+        		<div id="count" class="button active">COUNT</div>
+        		<div id="name" class="button">NAME</div>
+      		</div>
+      		Here we go! How much a student should pay for higher education in all states 2000 - 2011 
+			<div id = "vis"></div>
+		</div>
+
+		<script>window.jQuery || document.write('<script src="lib/jquery-1.7.2.min.js"><\/script>')</script>
 		<script src = "lib/d3.v3.min.js"></script>
 		<script src = "lib/topojson.v1.min.js"></script>
 		<script src = "lib/d3.slider.js"></script>	
 		<script src = "lib/sankey.js"></script>
+		<script src = "lib/coffee-script.js"></script>
+		<script src = "lib/isotope.pkgd.min.js"></script>
+		<script src = "lib/queue.min.js"></script>
 		<script src = "js/map_change_time.js"></script>
 		<script src = "js/csu_budget.js"></script>
+		<script type = "text/coffeescript" src = "coffee/small_multiples.coffee">
 	</body>
 </html>
 

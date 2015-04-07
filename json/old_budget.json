@@ -3,6 +3,8 @@
 	{"color":"#1C5A74", "name": "Colorado State University",	"des": ""},
 
 	{"color":"#aacccc", "name": "FFS ContractS",	"des": ""},
+	{"color":"#aacccc", "name": "Undergraduate Resident Tuition (Stipend)",	"des": ""},
+	{"color":"#aacccc", "name": "Undergraduate Resident Tuition (Student Share)",	"des": ""},
 	{"color":"#aacccc", "name": "Subtotal Undergraduate Resident Tuition",				"des": ""},
 	{"color":"#aacccc", "name": "Graduate Resident Tuition",						"des": ""},
 	{"color":"#88aaaa", "name": "Non-Resident Tuition",									"des": ""},
@@ -16,6 +18,8 @@
 	{"color":"#83AA76", "name": "Student Service",			"des": "For schools' academic support services for athletes."},
 	{"color":"#83AA76", "name": "Insitutional Support",			"des": "For improving game officiating, drug education, opportunities for minorities."},
 	{"color":"#83AA76", "name": "Operation & Maintenance of Plant",	"des": ""},
+	{"color":"#cc9944", "name": "Net Tuition",	"des": ""},	
+	{"color":"#cc9944", "name": "State Fund",	"des": ""},
 
 	{"color":"#cc9944", "name": "Scholarships & Fellowships",	"des": ""},
 	{"color":"#eedd66", "name": "Hospitals",		"des": ""},
@@ -24,23 +28,26 @@
 	],
 
 	"links": [
-	{"source": 1, "target": 0, "value": 21205546},
-	{"source": 2, "target": 0, "value": 155498408},
-	{"source": 3, "target": 0, "value": 14984631},
-	{"source": 4, "target": 0, "value": 102943456},
-	{"source": 5, "target": 0, "value": 64193917},
-
+	{"source": 1, "target": 16, "value": 21205546},
+	{"source": 2, "target": 4, "value": 31593515},
+	{"source": 3, "target": 4, "value": 123904893},	
+	{"source": 4, "target": 15, "value": 155498408},
+	{"source": 5, "target": 15, "value": 14984631},
+	{"source": 6, "target": 15, "value": 102943456},
+	{"source": 7, "target": 16, "value": 64193917},
+	{"source": 15, "target":0, "value": 273426495},
+	{"source": 16, "target":0, "value": 85399463},
 	
 
-	{"source": 0, "target": 6, "value": 169540351},
-	{"source": 0, "target": 7, "value": 18247346},
-	{"source": 0, "target": 8, "value": 818857},
-	{"source": 0, "target": 9, "value": 41242387},
-	{"source": 0, "target": 10, "value": 22317485},
-	{"source": 0, "target": 11, "value": 26409013},
-	{"source": 0, "target": 12, "value": 36037559},
-	{"source": 0, "target": 13, "value": 40503187},
-	{"source": 0, "target": 14, "value": 0},
-	{"source": 0, "target": 15, "value": 3709774}
+	{"source": 0, "target": 8, "value": 169540351},
+	{"source": 0, "target": 9, "value": 18247346},
+	{"source": 0, "target": 10, "value": 818857},
+	{"source": 0, "target": 11, "value": 41242387},
+	{"source": 0, "target": 12, "value": 22317485},
+	{"source": 0, "target": 13, "value": 26409013},
+	{"source": 0, "target": 14, "value": 36037559},
+	{"source": 0, "target": 17, "value": 40503187},
+	{"source": 0, "target": 18, "value": 0},
+	{"source": 0, "target": 19, "value": 3709774}
 	]
 }
