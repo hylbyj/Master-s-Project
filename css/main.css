@@ -231,15 +231,26 @@ h2{
   stroke-opacity: .3;
 }
 
-#legend-ncaa {
-  background: #1c5a74;
+#legend-tuition {
+  background: #a6dba0;
 }
 
-#legend-cash {
-  background: #83AA76;
+#legend-tuition-final {
+  background: #008837;
 }
-#legend-rect {
-  background: #aacccc;
+
+#legend-university {
+  background: #f7f7f7;
+}
+
+#legend-revenue{
+  background: #c2a5cf; 
+}
+#legend-revenue-final{
+  background: #7b3294;
+}
+#legend-cash {
+    background: #1c5a74;
 }
 
 .chart {
@@ -324,5 +335,52 @@ svg {
 
 #name {
   border-radius: 0px 5px 5px 0px;
+}
+
+h2#timoni{
+  font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+  font-weight: normal;
+  font-size: 3.50em;
+  letter-spacing: .2em;
+  line-height: 1.1em;
+  margin:0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#container-text{
+  font-family:Georgia;
+  font-size: 16px;
+  line-height: 1.5;
+  width:80%;
+  position: relative;
+  left:10%;
+}
+h3#timoni{
+  font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+  font-weight: normal;
+  font-size: 2.00em;
+  letter-spacing: .2em;
+  line-height: 1.1em;
+  margin:0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.interactive h4{
+  font-family: Georgia;
+  text-align: center;
+  font-size: 1.75em;
+}
+.interactive p a:hover{
+  text-decoration: underline;
+}
+.interactive .center{
+  text-align:center;
+}
+.fulli_container{
+  width:920px;
+  margin:0px auto;
+  font-family:Georgia;
+  font-size:14px;
+  line-height:18px;
 }
 

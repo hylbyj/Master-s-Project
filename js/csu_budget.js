@@ -3,7 +3,7 @@ var margin = {top: 1, right: 1, bottom: 6, left: 1},
     height = 500 - margin.top - margin.bottom;
 
 var formatNumber = d3.format("$,.1f"), // one decimal place
-    format = function(d) { return formatNumber(d) + " million"; },
+    format = function(d) { return formatNumber(d); },
     color = d3.scale.category20(); //color scheme: https://github.com/mbostock/d3/wiki/Ordinal-Scales#category10
 
 function addSankey(overlapSources,overlapTargets,parent) {
@@ -38,7 +38,7 @@ d3.json("json/old_budget.json", function(money) {
       .sort(function(a, b) { return b.dy - a.dy; });
 
   link.append("title")
-      .text(function(d) { return d.source.name + " → " + d.target.name + ":\n" + format(d.value) + "\n" + d.target.des; });
+      .text(function(d) { return d.source.name + "->" + d.target.name + ":\n" + format(d.value) + "\n" + d.target.des; });
 
   var node = svg.append("g").selectAll(".node")
       .data(money.nodes)
@@ -66,7 +66,7 @@ d3.json("json/old_budget.json", function(money) {
       .attr("dy", ".35em")
       .attr("text-anchor", "end")
       .attr("transform", null)
-      .text(function(d) { return d.name + ": " + formatNumber(d.value); })
+      .text(function(d) { return d.name; })
     .filter(function(d) { return d.x < width / 2; })
       .attr("x", 6 + sankey.nodeWidth())
       .attr("text-anchor", "start");
