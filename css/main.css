@@ -27,19 +27,19 @@ circle{
   stroke: #999;
 }
 circle.gain{
-  fill: #67a9cf;
+  fill: #008837;
   stroke: #fff;
 }
 circle.loss{
-  fill: #ef8a62;
+  fill: #7b3294;
   stroke: #fff;
 }
 #map circle{
   opacity: .65;
 }
 #map circle:hover{
-  stroke: black;
-  stroke-width: 2;
+  stroke: #f7f7f7;
+  stroke-width: 1.5;
 }
 #map-container{
   margin: auto;
