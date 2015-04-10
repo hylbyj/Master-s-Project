@@ -10,49 +10,10 @@
 		<div id = "container-text">
 			<p>Here is an deep analysis of what happened in Colorado State University Over the years. In 2013, due to financial deficiency, CSU-Pueblo had to cut off 20 faculties. However, CSU-Pueblo received the most state fund in 2012. In the past decade, as many public universities who struggled with descending state fund, CSU-Pueblo's tried different ways to boost enrollment. However, enrollment did not change much. As a result, they raise the tuition fee instead. The average tuition fee per student is more than twice as 10 years ago.</p>
 		</div>
-		<h3 id = "timoni">How one univeristy spends money?</h3>	
-		<div id = "container-text">
-			<p>The CSU system uses a Higher Education Funding Model called HB 14-1319. HB 14-1319, signed into law in May 2014, requires the Colorado Commission on Higher Education (CCHE) to develop a new base funding formula to allocate state general fund dollars among the state's public institutions of higher education. The financial problems within the Colorado education system are getting worsen these years. A report produced by CCHE stated "Colorado is in the midst of developing performance funding models."
-			</p>
-		</div>	
 		<div class="fulli_container interactive">
-			<h4>Budget of Colorado State University, 2011-2012</h4>
-			<p><b><i>Example: how to read the money flow</i></b></br><span id="legend-tuition-final">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Total Tuition <span id="legend-revenue-final">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Total State Fund<span id="legend-university">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Colorado State University <span id="legend-cash">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Expenditures</p>
-
-	  		<p id="chart1">
-		
-			<div id="Star_Footer">
-				<div id="Star_Info">
-					<p class="Star_Source">
-					<strong>Source: </strong> Colorado State University
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div id = "container-map">
-
-			<h2>
-			How states change on state funding for higher education?
-			</h2>
-			<p>(Here comes the map, dadadada)</p>
-			<div id = "date">
-				<p>From 1992-2012</p>
-			</div>
-			<div id = "play"></div>
-			<div id = "slider-container">
-				<div id = "slider-div"></div>
-				<div id = "slider-probe">
-					<p></p>
-					<div></div>
-				</div>
-			</div> 
-			<div id="map-container"></div>
-		</div>
-		<div id = "container">
-			<h2>
-			Net Tuition and Fees per Full-Time Student 
-			</h2>
+			<h4>
+			Net Tuition And Fees Per Full-Time Student 
+			</h4>
 			<div id="button-wrap">
         		<div id="count" class="button active">COUNT</div>
         		<div id="name" class="button">NAME</div>
@@ -60,6 +21,44 @@
       		Here we go! How much a student should pay for higher education in all states 2000 - 2011 
 			<div id = "vis"></div>
 		</div>
+		<h3 id = "timoni">How one univeristy spends money?</h3>	
+		<div id = "container-text">
+			<p>The CSU system uses a Higher Education Funding Model called HB 14-1319. HB 14-1319, signed into law in May 2014, requires the Colorado Commission on Higher Education (CCHE) to develop a new base funding formula to allocate state general fund dollars among the state's public institutions of higher education. The financial problems within the Colorado education system are getting worsen these years. A report produced by CCHE stated "Colorado is in the midst of developing performance funding models."
+			</p>
+		</div>	
+		<div class="fulli_container interactive">
+			<h4>Budget of Colorado State University, Fiscal Year 2011-2012</h4>
+			<p><b><i>Example: how to read the money flow</i></b></br><span id="legend-tuition-final">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Total Tuition <span id="legend-revenue-final">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Total State Fund<span id="legend-university">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Colorado State University <span id="legend-cash">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Expenditures</p>
+
+	  		<p id="chart1">
+		
+			<div id="Star_Footer">
+				<div id="Star_Info">
+					<p class="Star_Source">
+					<strong>Source: </strong> Office of Budgets, Colorado State University
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<h3 id = "timoni">
+		20 years declining of public funding for higher education
+		</h3>
+		
+		<div id = "container">
+			<div id = "date">
+				<p>From 1992-2012</p>
+			</div>
+			<div id = "play"></div>
+			<div id = "slider-container">
+				<div id = "slider-div"></div>
+				<div id = "slider-probe"></div>
+			</div> 
+			<div id="map-container"></div>
+		<svg id="visualisation" width="900" height="500"></svg>			
+		</div>
+
+
 
 		<script>window.jQuery || document.write('<script src="lib/jquery-1.7.2.min.js"><\/script>')</script>
 		<script src = "lib/d3.v3.min.js"></script>
@@ -69,9 +68,10 @@
 		<script src = "lib/coffee-script.js"></script>
 		<script src = "lib/isotope.pkgd.min.js"></script>
 		<script src = "lib/queue.min.js"></script>
+		<script type = "text/coffeescript" src = "coffee/small_multiples.coffee"></script>
 		<script src = "js/map_change_time.js"></script>
 		<script src = "js/csu_budget.js"></script>
-		<script type = "text/coffeescript" src = "coffee/small_multiples.coffee">
+		<script src = "js/areachart.js"></script>
 	</body>
 </html>
 
