@@ -98,12 +98,12 @@ var lineGen = d3.svg.line()
     .interpolate("basis");
 vis.append('svg:path')
     .attr('d', lineGen(data))
-    .attr('stroke', 'green')
+    .attr('stroke', '#a6dba0')
     .attr('stroke-width', 2)
     .attr('fill', 'none');
 vis.append('svg:path')
     .attr('d', lineGen(data2))
-    .attr('stroke', 'blue')
+    .attr('stroke', '#a6dba0')
     .attr('stroke-width', 2)
     .attr('fill', 'none');
 }

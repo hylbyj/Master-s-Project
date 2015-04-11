@@ -1,29 +1,29 @@
 {
 	"nodes": [
-	{"color":"#1C5A74", "name": "Colorado State University",	"des": ""},
+	{"color":"#f7f7f7", "name": "CSU",	"des": ""},
 
-	{"color":"#aacccc", "name": "FFS ContractS",	"des": ""},
-	{"color":"#aacccc", "name": "Undergraduate Resident Tuition (Stipend)",	"des": ""},
-	{"color":"#aacccc", "name": "Undergraduate Resident Tuition (Student Share)",	"des": ""},
-	{"color":"#aacccc", "name": "Subtotal Undergraduate Resident Tuition",				"des": ""},
-	{"color":"#aacccc", "name": "Graduate Resident Tuition",						"des": ""},
-	{"color":"#88aaaa", "name": "Non-Resident Tuition",									"des": ""},
-	{"color":"#6699aa", "name": "Non Appropriated E & G (Other than Tuition) Program Code 11XX",										"des": ""},
+	{"color":"c2a5cf", "name": "FFS Contracts",	"des": ""},
+	{"color":"#a6dba0", "name": "Undergraduate Resident Tuition (Stipend)",	"des": ""},
+	{"color":"#a6dba0", "name": "Undergraduate Resident Tuition (Student Share)",	"des": ""},
+	{"color":"#a6dba0", "name": "Subtotal Undergraduate Resident Tuition",				"des": ""},
+	{"color":"#a6dba0", "name": "Graduate Resident Tuition",						"des": ""},
+	{"color":"#a6dba0", "name": "Non-Resident Tuition",									"des": ""},
+	{"color":"#c2a5cf", "name": "Non Appropriated E & G (Other than Tuition)",										"des": ""},
 
 
-	{"color":"#83AA76", "name": "Instruction", 				"des": "Based on conferences' performance in NCAA Tournament over rolling six-year period."},
-	{"color":"#83AA76", "name": "Research(State Supported)",			"des": "Made to all Division I schools based on number of athletic scholoarships."},
-	{"color":"#83AA76", "name": "Public Service",		"des": "Pays for items not covered by scholarships such as emergency trips home, clothes and graduate test fees."},
-	{"color":"#83AA76", "name": "Academic Support",		"des": "Based on number of sports sponsored by schools."},
-	{"color":"#83AA76", "name": "Student Service",			"des": "For schools' academic support services for athletes."},
-	{"color":"#83AA76", "name": "Insitutional Support",			"des": "For improving game officiating, drug education, opportunities for minorities."},
-	{"color":"#83AA76", "name": "Operation & Maintenance of Plant",	"des": ""},
-	{"color":"#cc9944", "name": "Net Tuition",	"des": ""},	
-	{"color":"#cc9944", "name": "State Fund",	"des": ""},
+	{"color":"#1c5a74", "name": "Instruction", 				"des": "Based on conferences' performance in NCAA Tournament over rolling six-year period."},
+	{"color":"#1c5a74", "name": "Research(State Supported)",			"des": "Made to all Division I schools based on number of athletic scholoarships."},
+	{"color":"#1c5a74", "name": "Public Service",		"des": "Pays for items not covered by scholarships such as emergency trips home, clothes and graduate test fees."},
+	{"color":"#1c5a74", "name": "Academic Support",		"des": "Based on number of sports sponsored by schools."},
+	{"color":"#1c5a74", "name": "Student Service",			"des": "For schools' academic support services for athletes."},
+	{"color":"#1c5a74", "name": "Insitutional Support",			"des": "For improving game officiating, drug education, opportunities for minorities."},
+	{"color":"#1c5a74", "name": "Operation & Maintenance of Plant",	"des": ""},
+	{"color":"#008837", "name": "Net Tuition",	"des": ""},	
+	{"color":"#7b3294", "name": "State Fund",	"des": ""},
 
-	{"color":"#cc9944", "name": "Scholarships & Fellowships",	"des": ""},
-	{"color":"#eedd66", "name": "Hospitals",		"des": ""},
-	{"color":"#bb6611", "name": "Transfers",	"des": ""}
+	{"color":"#1c5a74", "name": "Scholarships & Fellowships",	"des": ""},
+	{"color":"#1c5a74", "name": "Hospitals",		"des": ""},
+	{"color":"#1c5a74", "name": "Transfers",	"des": ""}
 
 	],
 
