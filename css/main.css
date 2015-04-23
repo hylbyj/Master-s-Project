@@ -271,12 +271,24 @@ svg {
 
 .area {
   fill: #a6dba0;
+  opacity: 0.2;
+}
+
+.areanew{
+  fill: #7b3294;
+  opacity: 0.2
 }
 
 .line {
   fill: none;
-  stroke: #74736c;
-  stroke-width: 1.4px;
+  stroke: #008837;
+  stroke-width: 2.1px;
+}
+
+.linenew {
+  fill: none;
+  stroke: #7b3294;
+  stroke-width: 2.1px;
 }
 
 .title {

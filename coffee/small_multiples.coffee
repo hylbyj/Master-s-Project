@@ -15,7 +15,9 @@ SmallMultiples = () ->
 
   # these will be set to d3 selections later
   circle = null
+  circle_1 = null
   caption = null
+  caption_1 = null
   curYear = null
 
   # d3.bisector creates a bisect function that
@@ -33,6 +35,7 @@ SmallMultiples = () ->
   # swap in your own data!
   xValue = (d) -> d.date
   yValue = (d) -> d.n
+  yValue_1 = (d) -> d.l
 
   # The large tickSize is used
   # to paint lines across the plots
@@ -47,10 +50,21 @@ SmallMultiples = () ->
     .x((d) -> xScale(xValue(d)))
     .y0(height)
     .y1((d) -> yScale(yValue(d)))
+    
+  area_new = d3.svg.area()
+    .x((d) -> xScale(xValue(d)))
+    .y0(height)
+    .y1((d) -> yScale(yValue_1(d)))
+
 
   line = d3.svg.line()
     .x((d) -> xScale(xValue(d)))
     .y((d) -> yScale(yValue(d)))
+
+  line_new = d3.svg.line()
+    .x((d) -> xScale(xValue(d)))
+    .y((d) -> yScale(yValue_1(d)))
+
 
   # ---
   # Sets the domain for our x and y scales.
@@ -116,11 +130,21 @@ SmallMultiples = () ->
         .attr("class", "area")
         .style("pointer-events", "none")
         .attr("d", (c) -> area(c.values))
+
+      lines.append("path")
+        .attr("class", "areanew")
+        .style("pointer-events", "none")
+        .attr("d", (c) -> area_new(c.values))
         
       lines.append("path")
         .attr("class", "line")
         .style("pointer-events", "none")
         .attr("d", (c) -> line(c.values))
+
+      lines.append("path")
+        .attr("class", "linenew")
+        .style("pointer-events", "none")
+        .attr("d", (c) -> line_new(c.values))
 
       lines.append("text")
         .attr("class", "title")
@@ -155,7 +179,18 @@ SmallMultiples = () ->
         .attr("opacity", 0)
         .style("pointer-events", "none")
 
+      circle_1 = lines.append("circle")
+        .attr("r", 2.2)
+        .attr("opacity", 0)
+        .style("pointer-events", "none")
+
       caption = lines.append("text")
+        .attr("class", "caption")
+        .attr("text-anchor", "middle")
+        .style("pointer-events", "none")
+        .attr("dy", +8)
+
+      caption_1 = lines.append("text")
         .attr("class", "caption")
         .attr("text-anchor", "middle")
         .style("pointer-events", "none")
@@ -181,6 +216,7 @@ SmallMultiples = () ->
   # ---
   mouseover = () ->
     circle.attr("opacity", 1.0)
+    circle_1.attr("opacity", 1.0)    
     d3.selectAll(".static_year").classed("hidden", true)
     mousemove.call(this)
 
@@ -203,11 +239,22 @@ SmallMultiples = () ->
         index = bisect(c.values, date, 0, c.values.length - 1)
         yScale(yValue(c.values[index]))
 
+    circle_1.attr("cx", xScale(date))
+      .attr "cy", (c) ->
+        index = bisect(c.values, date, 0, c.values.length - 1)
+        yScale(yValue_1(c.values[index]))
+
     caption.attr("x", xScale(date))
       .attr "y", (c) ->
         yScale(yValue(c.values[index]))
       .text (c) ->
         yValue(c.values[index])
+
+    caption_1.attr("x", xScale(date))
+      .attr "y", (c) ->
+        yScale(yValue_1(c.values[index]))
+      .text (c) ->
+        yValue_1(c.values[index])
 
     curYear.attr("x", xScale(date))
       .text(year)
@@ -220,8 +267,11 @@ SmallMultiples = () ->
   mouseout = () ->
     d3.selectAll(".static_year").classed("hidden", false)
     circle.attr("opacity", 0)
+    circle_1.attr("opacity", 0)    
     caption.text("")
+    caption_1.text("")    
     curYear.text("")
+
 
 
   # ---
@@ -260,26 +310,12 @@ transformData = (rawData) ->
   rawData.forEach (d) ->
     d.date = format.parse(d.year)
     d.n = +d.n
-  nest = d3.nest()
-    .key((d) -> d.category)
-    .sortValues((a,b) -> d3.ascending(a.date, b.date))
-    .entries(rawData)
-  nest
-
-#modified by hh
-
-transformData_new = (rawData) ->
-  format = d3.time.format("%Y")
-  rawData.forEach (d) ->
-    d.date = format.parse(d.year)
     d.l = +d.l
   nest = d3.nest()
     .key((d) -> d.category)
     .sortValues((a,b) -> d3.ascending(a.date, b.date))
     .entries(rawData)
   nest
-
-
 
 # ---
 # Helper function that simplifies the calling
@@ -352,9 +388,6 @@ $ ->
     plotData("#vis", data, plot)
     setupIsoytpe()
 
-    data_new = transformData_new(rawData)
-    plotData("#vis",data,plot)
-    setupIsoytpe_new()
 
   # I've started using Bostock's queue to load data.
   # The tool allows you to easily add more input files

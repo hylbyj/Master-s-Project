@@ -34,7 +34,7 @@ var probe,
 
 var dateScale, sliderScale, slider;
 
-var format = d3.format(",");
+var format = d3.format(".0%");
 
 var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
     months_full = ["January","February","March","April","May","June","July","August","September","October","November","December"],
@@ -77,7 +77,6 @@ d3.json("json/states.json", function(error, us) {
 
   d3.csv("csv/state_fund.csv",function(data){
     var first = data[0];
-    console.log(data[0]);
     for ( var mug in first ){
       if ( mug != "STATE" && mug != "LAT" && mug != "LON" ){
         orderedColumns.push(mug);
@@ -292,12 +291,13 @@ function createLegend(){
 }
 
 function setProbeContent(d){
+  var format1 = d3.format(".0%");
   var val = d[ orderedColumns[ currentFrame ] ],
       m_y = getMonthYear( orderedColumns[ currentFrame ] ),
       month = months_full[ months.indexOf(m_y[0]) ];
-  var html = "<strong>" + d.STATE + "</strong><br/>" + "Net tuition is"
-            format( Math.abs( val ) ) + " of Total Education Revenues " + ( val < 0.5 ? "State pay more" : "Student pay more" ) + "<br/>" +
-            "<span>" + month + " " + m_y[1] + "</span>";
+  var html = "<strong>" + d.STATE + "</strong><br/>" + "Net tuition is " +
+            format1(val) + " of Total Education Revenues " + "</br>"+ ( val < 0.5 ? "State pay more" : "Student pay more" ) + "<br/>" +
+            "<span>" + m_y[1] + "</span>";
   probe
     .html( html );
 }
