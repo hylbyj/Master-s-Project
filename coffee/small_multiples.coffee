@@ -266,6 +266,21 @@ transformData = (rawData) ->
     .entries(rawData)
   nest
 
+#modified by hh
+
+transformData_new = (rawData) ->
+  format = d3.time.format("%Y")
+  rawData.forEach (d) ->
+    d.date = format.parse(d.year)
+    d.l = +d.l
+  nest = d3.nest()
+    .key((d) -> d.category)
+    .sortValues((a,b) -> d3.ascending(a.date, b.date))
+    .entries(rawData)
+  nest
+
+
+
 # ---
 # Helper function that simplifies the calling
 # of our chart with it's data and div selector
@@ -298,6 +313,25 @@ setupIsoytpe = () ->
 
   $("#vis").isotope({sortBy:'count'})
 
+
+#modified by hh
+setupIsoytpe_new = () ->
+  $("#vis").isotope({
+    itemSelector: '.chart',
+    layoutMode: 'fitRows',
+    getSortData: {
+      count: (e) ->
+        d = d3.select(e).datum()
+        sum = d3.sum(d.values, (d) -> d.l)
+        sum * -1
+      name: (e) ->
+        d = d3.select(e).datum()
+        d.key
+    }
+  })
+
+  $("#vis").isotope({sortBy:'count'})
+
 # ---
 # jQuery document ready.
 # ---
@@ -318,13 +352,17 @@ $ ->
     plotData("#vis", data, plot)
     setupIsoytpe()
 
+    data_new = transformData_new(rawData)
+    plotData("#vis",data,plot)
+    setupIsoytpe_new()
+
   # I've started using Bostock's queue to load data.
   # The tool allows you to easily add more input files
   # if you need to (for this example it might be overkill or
   # inefficient, but its good to know about).
   # https://github.com/mbostock/queue
   queue()
-    .defer(d3.tsv, "tsv/state_fund.tsv")
+    .defer(d3.tsv, "tsv/state_fund_new.tsv")
     .await(display)
 
   d3.select("#button-wrap").selectAll("div").on "click", () ->
