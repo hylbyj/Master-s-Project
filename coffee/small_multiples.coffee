@@ -341,22 +341,7 @@ setupIsoytpe = () ->
         d = d3.select(e).datum()
         sum = d3.sum(d.values, (d) -> d.n)
         sum * -1
-      name: (e) ->
-        d = d3.select(e).datum()
-        d.key
-    }
-  })
-
-  $("#vis").isotope({sortBy:'count'})
-
-
-#modified by hh
-setupIsoytpe_new = () ->
-  $("#vis").isotope({
-    itemSelector: '.chart',
-    layoutMode: 'fitRows',
-    getSortData: {
-      count: (e) ->
+      state: (e) ->
         d = d3.select(e).datum()
         sum = d3.sum(d.values, (d) -> d.l)
         sum * -1
@@ -366,7 +351,8 @@ setupIsoytpe_new = () ->
     }
   })
 
-  $("#vis").isotope({sortBy:'count'})
+  $("#vis").isotope({sortBy:'name'})
+
 
 # ---
 # jQuery document ready.
